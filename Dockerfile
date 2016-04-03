@@ -1,7 +1,7 @@
 FROM centos:latest
 
 RUN yum -y update && \
-    yum -y install openssh-server openssh-clients initscripts sudo passwd sed tmux gcc make &&\
+    yum -y install openssh-server openssh-clients initscripts sudo passwd sed tmux gcc make gcc-c++ &&\
     yum -y clean all
 
 COPY id_rsa.pub /root/id_rsa.pub
